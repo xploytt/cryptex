@@ -1,0 +1,151 @@
+#contact-cryptex{
+    background-color: hsl(240deg 5% 8%);
+    padding: 5rem 1rem 2rem;
+}
+
+#contact-cryptex > #contact-box > div:first-child div:first-child img{
+    width: 3rem;
+}
+#contact-cryptex > #contact-details div{
+    gap: .3rem;
+}
+#contact-cryptex > #contact-box > div:first-child > div::after{
+    content: "Cryptex";
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#contact-cryptex ul li{
+    margin: 1rem 0;
+}
+
+#contact-cryptex #contact-details h3{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+#contact-cryptex #contact-details ul, footer{
+    color: hsl(227deg 13% 73%);
+}
+#contact-cryptex ul{
+    color: hsl(0deg 0% 85%);
+}
+
+#contact-box div.footer-info > h3{
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    margin-bottom: 30px;
+}
+
+#contact-cryptex  div.footer-info{
+    margin-top: 3rem;
+}
+
+
+footer{
+    text-align: center;
+    padding: 1rem .7rem;
+    font-size: 1.2rem;
+}
+
+footer #socials{
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 1rem;
+}
+footer #socials a img{
+    width: 1.2rem;
+    filter: invert(73%) sepia(6%) saturate(434%) hue-rotate(189deg) brightness(96%) contrast(100%);;
+}
+
+
+/* media query */
+
+@media (min-width:575px) {
+    #contact-cryptex #contact-details ul li:last-child{
+        width: 400px;
+    }
+}
+
+@media (min-width:770px) {
+    #contact-box, footer{
+        width: 730px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 8rem;
+        margin: 0 auto;
+    }
+
+    #contact-details{
+        position: relative;
+        top: 3rem;
+        max-height: 270px;
+    }
+
+    #contact-cryptex{
+        padding: 2rem 2rem;
+    }
+
+    #contact-cryptex ul li{
+        margin: .75rem 0;
+    }
+
+    footer{
+        display: flex;
+        align-items: center;
+    }
+
+    footer #socials{
+        margin-left: auto;
+    }
+}
+
+@media (min-width:990px) and (max-width:1199px) {
+    #contact-box, footer{
+        width: 100%;
+        flex-wrap: wrap;
+        column-gap: 5rem;
+        max-width: 960px;
+    }
+    #contact-details{
+        flex: 1 1 60%;
+    }
+
+    #contact-box div.footer-info {
+        flex: 1 1 23%;
+    }
+    
+
+}
+
+@media (min-width:1200px) {
+    #contact-cryptex #contact-details ul li:last-child{
+        width: 90%;
+    }
+
+    #contact-box, footer{
+        flex-wrap: nowrap;
+        column-gap: 5rem;
+        width: 100%;
+        max-width: 1210px;
+        overflow: hidden;
+    }
+
+    #contact-cryptex{
+        padding: 2rem 1rem;
+        padding-bottom: 5rem;
+    }
+
+    #contact-details{
+        width: 30%;
+    }
+
+    #contact-details{
+        max-height: 240px;
+    }
+
+    #contact-box > div:nth-child(2){
+        margin-left: -20px;
+    }
+}

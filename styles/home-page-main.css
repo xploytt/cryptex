@@ -1,0 +1,5 @@
+
+#homepage-main img[data-img="hero-banner"]{
+    width: 100%;
+    display: block;
+}

@@ -1,0 +1,278 @@
+main > section:nth-child(2){
+    background-color: hsl(240deg 5% 8%);
+    color: white;
+    padding-bottom: 5rem;
+}
+
+main > section:nth-child(2) article{
+    display: grid;
+}
+
+main > section:nth-child(2) [data-div="activities"] ul{
+    flex-flow: row wrap;
+}
+main > section:nth-child(2) article > div:nth-child(1){
+    border-bottom: 1px solid hsl(225deg 15% 16%);
+}
+main > section:nth-child(2) [data-div="activities"] ul li{
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+main > section:nth-child(2) article{
+    margin: 0 1rem;
+    background-color: hsl(228deg 9% 10%);
+    border: 1px solid hsl(225deg 15% 16%);
+    border-radius: 1.5rem;
+    padding: 1rem .7rem;
+    position: relative;
+    top: -5rem;
+}
+
+main > section:nth-child(2) article > div{
+    padding: 1rem .5rem; 
+}
+
+[data-div="activities"] li{
+    padding: .5rem .8rem;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+.current-activity{
+    background-color: hsl(222deg 100% 61%);
+}
+
+#card-grid{
+    display: grid;
+}
+
+img.coin-svg{
+    width: 1.5rem;
+}
+
+div.card{
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+}
+div.card:hover{
+    background-color: hsl(230deg 16% 22% / 50%);
+    border-radius: .7rem;
+}
+
+#card-grid .card div:first-child[data-flex="true"]{
+    gap: .5rem;
+}
+div.card-header > span span{
+    margin-left: .3rem;
+    color: hsl(227deg 13% 73%);
+}
+div.card-header > span{
+    font-weight: 700;
+    font-size: 1rem;
+}
+span.card-coin{
+    font-weight: 500;
+}
+data.card-value{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: .7rem 0;
+    display: inline-block;
+}
+
+div.card-analytics span:first-child{
+    color: hsl(227deg 13% 73%);
+}
+div.card-analytics span:nth-child(2){
+    margin-left: .5rem;
+    padding: .3rem .5rem;
+    background-color: hsl(0deg 64% 52%);
+    border-radius: 2rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+div.card:nth-child(2) div.card-analytics span:nth-child(2){
+    background-color: hsl(142deg 43% 54%);
+}
+
+
+#market-categories li a{
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+#market-update{
+    padding: 1rem 1rem;
+}
+
+#market-update div:first-child{
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#market-update div:first-child h2{
+    font-size: 2rem;
+}
+#market-update div:first-child > a{
+    margin-left: auto;
+    min-width:fit-content;
+    font-weight: 700;
+    border-bottom: 2px solid hsl(225deg 15% 16%);
+    transition: color 200ms, border-bottom-color 200ms;
+}
+#market-update div:first-child > a:hover{
+    color: hsl(222deg 100% 61%);
+    border-bottom-color: hsl(222deg 100% 61%);
+}
+
+#table-container #market-categories{
+    gap: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+#table-container #market-categories li:first-child{
+    min-width: 6rem
+}
+
+#table-container #market-categories li.active-category{
+    background-color: hsl(222deg 100% 61%);
+}
+
+#table-container #market-categories li{
+    padding: .5rem 1rem;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+
+table tr:first-child td, table tr:first-child th{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+table tr td, table tr th, table tr td button{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-weight: 700;
+}
+table tr:first-child{
+    box-shadow: 0px 8px 0px -5px hsl(0deg 0% 100%);
+}
+
+#market-table tr > td:nth-child(3)[data-flex="true"]{
+    gap: .7rem;
+}
+
+#market-table tr > td:nth-child(3) > img{
+    width: 1.5rem;
+}
+table tr{
+    box-shadow: 0px 7px 0px -5px hsl(225deg 15% 16%);
+}
+table tr:not(#header-row), table tr:not(#header-row) td, table tr:not(#header-row) th{
+    height: 80px;
+}
+
+table tr td:nth-child(3) > span {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1rem;
+}
+
+table tr td:nth-child(3) > span > span{
+    color: hsl(223deg 10% 52%);
+    font-size: .9rem;
+}
+
+table, table tr, table tr th, table tr td:not(td.index){
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td.unicode{
+    font-size: 1.3rem;
+    color: hsl(227deg 13% 73%);
+}
+
+tr.red td:nth-child(5){
+    color: hsl(0deg 64% 52%);
+}
+tr.green td:nth-child(5){
+    color: hsl(142deg 43% 54%)
+}
+tr td:nth-child(5){
+    font-weight: lighter;
+}
+
+table tr td button{
+    padding: .4rem .6rem;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    font-size: .9rem;
+    transition: background-color 300ms ease;
+}
+
+table tr:hover td > button{
+    background-color: hsl(222deg 100% 61%);
+    border-color: hsl(222deg 100% 61%);
+}
+table tr:not(table tr:first-child):hover{
+    background-color: hsl(222deg 100% 61% / 5%);
+}
+
+table tr:last-child{
+    margin-bottom: 70px;
+}
+
+
+/* media query */
+
+@media (min-width:770px) {
+    #card-grid{
+        grid-template-columns: 50% 50%;
+    }
+    main > section:nth-child(2) article{
+        padding: 0 .7rem;
+    }    
+
+}
+
+@media (min-width:990px) {
+    #web3-details > article,
+    #market-update{
+        width: 900px;
+    }
+    #market-update{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #market-update table{
+        width: 100%;
+        font-size: 1.15rem;
+    }
+
+    #market-update table tr > td:nth-child(3) > span{
+        font-size: 1.1rem;
+    }
+
+    #market-update div:first-child h2{
+        font-size: 2.5rem;
+    }
+
+    #second-sec{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width:1200px) {
+    #card-grid{
+        grid-template-columns: 25% 25% 25% 25%;
+        row-gap: 2rem;
+    }
+    #web3-details > article,
+    #market-update{
+        width: 100%;
+        max-width: 1210px;
+    }
+}

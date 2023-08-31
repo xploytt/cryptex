@@ -1,0 +1,141 @@
+#how-it-work{
+    text-align: center;
+    padding: 5rem 0 3rem;
+    color: hsl(227deg 13% 73%);
+}
+#how-it-work h2, #how-it-work h3{
+    color: white;
+}
+
+#how-it-work h3{
+    margin-bottom: .8rem;
+}
+
+#how-it-work h2{
+    font-size: 2rem;
+    margin-bottom: .7rem;
+    font-weight: 900;
+}
+#how-it-work p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#how-it-work div.process:not(#how-it-work div.process:last-child) p{
+    margin-bottom: .6rem;
+}
+#how-it-work > div > p{
+    margin-bottom: 2rem;
+    font-size: 1.11rem;
+}
+
+#how-it-work div{
+    padding: .5rem;
+}
+#how-it-work #process-container{
+    display: grid;
+}
+
+#how-it-work > div{
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#how-it-work small{
+    display: block;
+    font-size: .8rem;
+    font-weight: 900;
+    margin: .5rem 0;
+}
+
+
+/* media query */
+
+@media (min-width:770px){
+    
+    #how-it-work > div{
+        width: 750px;
+    }
+
+    #how-it-work > div > h2{
+        font-size: 2.5rem;
+    }
+
+    #how-it-work > div > p{
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #how-it-work #process-container{
+        grid-template-columns: 50% 50%;
+        gap: 2rem;
+        margin-top: 30px;
+    }
+    #how-it-work #process-container div.process{
+        position: relative;
+    }
+    div.process > img{
+        transition:  500ms ease;
+        transform: rotateY(360deg);
+    }
+
+    div.process:hover > img{
+        /* display: none; */
+        transform: rotateY(0);
+    }
+
+    #how-it-work #process-container div.process:nth-child(2n+1) > p::after{
+        content: "";
+        background-image: url("../images/connect-line.png");
+        width: 160px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 50px;
+        right: -85px;
+    }
+}
+
+@media (min-width:990px) {
+    #how-it-work > div{
+        width: 960px;
+    }
+
+    #how-it-work #process-container > div.process p{
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:1200px){
+    #how-it-work #process-container{
+        grid-template-columns: repeat(4, 24.5%);
+        gap: .5rem;
+    }
+    
+    #how-it-work > div{
+        width: 100%;
+        max-width: 1280px;
+        /* margin: 0 0; */
+    }
+
+    #how-it-work #process-container > div.process p{
+        width: 250px;
+    }
+
+    #how-it-work #process-container div.process:nth-child(2) > p::after{
+        content: "";
+        background-image: url("../images/connect-line.png");
+        width: 160px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 50px;
+        right: -85px;
+    }
+}

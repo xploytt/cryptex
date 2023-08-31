@@ -1,0 +1,136 @@
+@import url("./header.css");
+@import url("./home-page-main.css");
+@import url("./first-section.css");
+@import url("./second-section.css");
+@import "./how-it-works.css";
+@import "./explore-more.css";
+@import "./mobile-apps.css";
+@import "./footer-section.css";
+
+:root{
+    --DM-font: 'DM Sans', sans-serif;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--DM-font);
+    scroll-behavior: smooth;
+}
+
+[data-flex="true"]{
+    display: flex;
+    align-items: center;
+}
+
+ul li{
+    list-style: none; 
+}
+
+#root{
+    position: relative;
+    background-color: hsl(228deg 9% 10%);
+    color: white;
+}
+button, a{
+    cursor: pointer;
+}
+
+button:focus, a:focus{
+    border: 1px solid transparent;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+#table-container{
+    overflow-x: auto;
+}
+#table-container::-webkit-scrollbar{
+    height: 15px;
+}
+#table-container::-webkit-scrollbar-thumb{
+    border: 2px solid hsl(220, 4%, 5%);
+    border-width: 2px 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: hsl(220, 5%, 20%);
+}
+
+::-webkit-scrollbar-track{
+    background-color: hsl(220, 4%, 5%);
+}
+::-webkit-scrollbar{
+    width: 10px;
+    margin-top: 60px;
+}
+
+
+/* tab and big viewports */
+
+@media (max-width:981px) {
+    #web3-details > article{
+        width: 90%;
+    }
+}
+
+#first-sec, 
+    #market-update,
+    #how-it-work > div,
+    #explore-more > div,
+    #mobile-apps > div,
+    #contact-cryptex > #contact-box{
+    transition: width 1000ms ease; 
+    }
+
+#web3-details > article{
+    margin: 0 auto;
+    transition: width 1000ms ease;
+}
+
+@media (min-width:575px) and (max-width: 769px) {
+    #header-container,
+    #first-sec, #web3-details > article,
+    #market-update,
+    #how-it-work > div,
+    #explore-more > div,
+    #mobile-apps > div,
+    #contact-cryptex > #contact-box{
+        width: 550px;
+        margin: 0 auto; 
+    } 
+}
+
+@media (min-width:770px) and (max-width: 989px) {
+    #header-container,
+    #first-sec, #web3-details > article,
+    #market-update,
+    #explore-more > div,
+    #mobile-apps > div{
+        width: 720px;
+        margin: 0 auto;
+    }
+}
+
+.viewport-visibility > *{
+    transition: 700ms ease;
+    transform: translateY(50px);
+    opacity: 0;
+    
+} 
+
+.viewport-visibility[data-viewport="active"] > *{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+

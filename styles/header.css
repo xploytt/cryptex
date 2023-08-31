@@ -1,0 +1,206 @@
+
+header{
+    background-color: hsl(240deg 5% 8%);
+    z-index: 1;
+}
+#header-container{
+    padding: 1rem 15px;
+    gap: 1rem;
+    color: white;
+    background-color: inherit;
+    z-index: 1;
+}
+
+#header-container div:first-child{
+    gap: 7px;
+}
+
+#header-container div:first-child::after{
+    content: "Cryptex";
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#header-container div:first-child img{
+    width: 2rem;
+}
+#nav-toggler{
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    margin-inline-start: auto;
+    outline: none;
+}
+
+#nav-toggler span{
+    width: 23px;
+    height: 3px;
+    background-color: white;
+    transition: opacity 500ms, transform 500ms;
+}
+
+nav a.current-page{
+    color: hsl(222deg 100% 61%); 
+}
+
+#header-container nav{
+    overflow-y: hidden;
+    position: absolute;
+    top: .82%;
+    z-index: 1;
+    background-color: hsl(240deg 5% 8%);
+    left: 0;
+    width: 100vw;
+    height: 0;
+    transition: height 300ms cubic-bezier(0.4, 0, 0.96, 0.92)
+}
+header.fixed-state #header-container nav{
+    top: 100%;
+}
+
+[data-navbar="true"] #header-container nav li{
+    opacity: 1;
+}
+
+#header-container nav li{
+    opacity: 0;
+    transition: opacity 500ms;
+}
+/* header nav li:nth-child(1){
+    transition-delay: 120ms;
+}
+header nav li:nth-child(2){
+    transition-delay: 100ms;
+}
+header nav li:nth-child(3){
+    transition-delay: 80ms;
+}
+header nav li:nth-child(4){
+    transition-delay: 60ms;
+}
+header nav li:nth-child(5){
+    transition-delay: 40ms;
+}
+header nav li:nth-child(6){
+    transition-delay: 20ms;
+} */
+
+
+
+[data-btn="wallet-link"]{
+    font-size: 1rem;
+    padding: 5px 1rem;
+    border-radius: 1.5rem;
+    outline: 1px solid hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+
+/* nav bar true  */
+
+/* [data-navbar="false"] header ul {
+    visibility: hidden;
+} */
+
+[data-navbar="true"] #header-container nav{
+    height: 100vh;
+}
+
+nav ul li{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .7rem 2rem;
+}
+#header-container nav li:not(header nav li:last-child){
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+}
+nav ul{
+    padding-top: 1rem;
+}
+[data-navbar="true"]{
+    overflow-y: hidden;
+}
+
+
+
+
+/* fixed state */
+header.fixed-state{
+    position: fixed;
+    width: 100vw; 
+    animation: FixedSlideIn 400ms cubic-bezier(0.33, 0.85, 0.4, 0.96) forwards;
+}
+
+@keyframes FixedSlideIn {
+
+    0% {
+      transform: translateY(-15px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  
+  }
+
+    header.fixed-state nav{
+    top: 100%;
+}
+
+/* nav toggler transform  */
+[data-navbar="true"] #header-container #nav-toggler span:nth-child(2){
+    opacity: 0;
+}
+[data-navbar="true"] #header-container #nav-toggler span:nth-child(1){
+    transform: rotate(45deg) translate(6px, 7px);
+}
+[data-navbar="true"] #header-container #nav-toggler span:nth-child(3){
+    transform: rotate(-45deg) translate(4px, -5px)
+}
+
+
+/*
+ firstly, remove visibility:hidden from ul, li.. it is redundant
+ make nav style not dependent on [data-navbar="true"]
+ line 101, 106
+
+
+*/
+
+@media (min-width: 990px) {
+    #header-container{
+        width: 900px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #header-container nav{
+        overflow: hidden;
+        position: initial;
+        height: fit-content;
+        margin-left: 1rem;
+    }
+    #header-container nav > ul{
+        display: flex;
+        padding-top: 0;
+    }
+    #header-container ul > li{
+        padding: 1rem .5REM;
+        opacity: 1;
+    }
+    #header-container nav li:not(header nav li:last-child){
+        border-bottom: none;
+    }
+    #header-container > #nav-toggler{
+        display: none;
+    }
+    #header-container div:first-child{
+        padding: 1rem 0;
+    }
+}
+
+@media (min-width:1200px) {
+    #header-container{
+        width: 100%;
+        max-width: 1210px;
+        padding: 0 1rem;
+    }
+}
